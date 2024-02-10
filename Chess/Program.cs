@@ -1,4 +1,5 @@
-﻿using Chess.tabuleiro;
+﻿using tabuleiro;
+using xadrez;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,13 @@ namespace Chess {
     class program {
         static void Main(string[] args) {
 
-            Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
-            Tela.imprimirTabuleiro(tabuleiro);
+            tab.colocarPeca(new Torre(tab, Cor.Preta) , new Posicao(0, 0));
+            tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 1));
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(2, 1));
+
+            Tela.imprimirTabuleiro(tab);
 
             Console.ReadLine();
 

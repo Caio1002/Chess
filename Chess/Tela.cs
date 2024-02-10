@@ -1,5 +1,5 @@
 ﻿using System;
-using Chess.tabuleiro;
+using tabuleiro;
 
 namespace Chess {
     class Tela {
